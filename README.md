@@ -96,7 +96,7 @@ frontend grafana-localhost
 
 **I defined three backends for grafana**:  
 
-**1. backend grafana_backend_localhost** for localhost grafana server (it's my grafana docker running on port 3000)
+**1. grafana_backend_localhost** for localhost grafana server (it's my grafana docker running on port 3000)
   grafana_backend_localhost not really needed( used for test changes)
   
 ```
@@ -104,7 +104,7 @@ frontend grafana-localhost
         server grafana localhost:3000
 	log global
 ```  
-**2. backend grafana_backend**  it's our proxied Grafana    
+**2. grafana_backend**  it's our proxied Grafana    
 
 ```
 backend grafana_backend
@@ -113,7 +113,7 @@ backend grafana_backend
 	log global
 ``` 
 
-**3. backend static_grafana**  for our copy of /public/img Grafana directory  and our custom images
+**3. static_grafana**  for our copy of /public/img Grafana directory  and our custom images
   here i set the rules for serving images 
 ```
 backend static_grafana
