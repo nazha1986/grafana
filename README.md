@@ -20,8 +20,8 @@ Ubuntu
 
 ### Installing and running Grafana
 
-I used a docker solution to run Grafana
-First of all we need to make a copy of grafana.ini file and we need to change a couple of parameters as they are described in this [link](https://grafana.com/tutorials/run-grafana-behind-a-proxy/)
+I used a docker solution to run Grafana  
+At First we need to make a copy of grafana.ini file and we need to change a couple of parameters as they are described in this [link](https://grafana.com/tutorials/run-grafana-behind-a-proxy/)
 
 ```
 [server]
