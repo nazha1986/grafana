@@ -94,21 +94,22 @@ frontend grafana-localhost
 	use_backend grafana_backend if is_local_host grafana_path 
 ```
 
-**I defined three backends for grafana**  
+**I defined three backends for grafana**:  
+
 **1. backend grafana_backend_localhost** for localhost grafana server (it's my grafana docker running on port 3000)
   grafana_backend_localhost not really needed( used for test changes)
   
 ```
   backend grafana_backend_localhost
         server grafana localhost:3000
-	    log global
+	log global
 ```  
 **2. backend grafana_backend**  it's our proxied Grafana    
 
 ```
 backend grafana_backend
   	http-request set-path %[path,regsub(^/grafana/?,/)]
-    server grafana localhost:3000
+        server grafana localhost:3000
 	log global
 ``` 
 
