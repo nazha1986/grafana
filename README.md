@@ -94,7 +94,7 @@ frontend grafana-localhost
 	use_backend grafana_backend if is_local_host grafana_path 
 ```
 
-**I defined three backends for grafana**
+**I defined three backends for grafana**  
 **1. backend grafana_backend_localhost** for localhost grafana server (it's my grafana docker running on port 3000)
   grafana_backend_localhost not really needed( used for test changes)
   
