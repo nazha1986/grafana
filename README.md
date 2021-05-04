@@ -33,7 +33,7 @@ serve_from_sub_path = true
 And than Run grafana docker image using our custom file grafana.ini
 
 ```
-docker run --rm  -p 3000:3000 --mount type=bind,source=$PWD/grafana/defaults.ini,target=/etc/grafana/grafana.ini  --name=grafana -e "GF_SERVER_ROOT_URL=http://localhost:3000/grafana" -e "GF_SERVER_SERVE_FROM_SUB_PATH=true" --name grafana grafana/grafana:6.5.3
+docker run --rm  -p 3000:3000 --mount type=bind,source=$PWD/grafana.ini,target=/etc/grafana/grafana.ini  --name=grafana -e "GF_SERVER_ROOT_URL=http://localhost:3000/grafana" -e "GF_SERVER_SERVE_FROM_SUB_PATH=true" --name grafana grafana/grafana:6.5.3
 ```
 
 check if Grafana is running correctly on port 3000 http://localhost:3000/
